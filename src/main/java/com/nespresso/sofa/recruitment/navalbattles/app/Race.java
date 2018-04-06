@@ -17,7 +17,8 @@ public class Race {
     }
 
     public Batteau winner() {
+        int winnerIndex = 0;
         batteaus = batteaus.stream().sorted(Comparator.comparing(Batteau::speedOfBatteau)).collect(Collectors.toList());
-        return batteaus.get(0);
+        return batteaus.get(winnerIndex);
     }
 }
